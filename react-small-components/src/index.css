@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  color: whitesmoke;
+
+}
+
+.App {
+  min-height: 100vh;
+  background-color: #00001A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*              1.   Counter                 */
+
+.counter-container {
+  font-size: 5rem;
+  color: whitesmoke;
+}
+
+.counter-buttons {
+  display: flex;
+  gap: 4rem;
+}
+
+.btn {
+  padding-inline: 1rem;
+  padding-block: .5rem;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.counter-score {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/*          2. Todo List                  */
+
+.addForm,
+.searchForm,
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+}
+
+.addForm,
+.editForm {
+  margin-top: 2rem;
+}
+
+.addFormLabel,
+.searchFormLabel,
+.editFormLabel {
+  color: whitesmoke;
+  font-family: monospace, monospace;
+  margin-left: .5rem;
+  letter-spacing: 1px;
+}
+
+.addFormInput,
+.searchFormInput,
+.editFormInput {
+  height: 60px;
+  width: 500px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  padding-inline: 1.2rem;
+  padding-block: 2rem;
+  /* letter-spacing: 1px; */
+  color: black;
+}
+
+.todoItem {
+  display: flex;
+  height: 60px;
+  width: 500px;
+  border-radius: 10px;
+  outline: none;
+  border: 1px solid white;
+  font-size: 1.5rem;
+  padding-inline: 1.2rem;
+  padding-block: 2rem;
+  margin-block: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  /* overflow: none; */
+}
+
+.taskFinished {
+  background-color: rgb(88, 87, 87);
+}
+
+.taskFinished p {
+  text-decoration: line-through;
+}
+
+.todoItem:hover {
+  transform: scale(1.04);
+
+  transition: transform .2s linear;
+}
+
+.todoItems {
+  margin-top: 2rem;
+}
+
+.deleteButton {
+  cursor: pointer;
+  z-index: 1;
+}
+
+.editButton {
+  cursor: pointer;
+}
+
+.editAndDelete {
+  display: flex;
+  gap: 1rem;
+}
+
+/*      3. Food Gallery     */
+
+.foodGallery {
+  padding: 2rem;
+}
+
+.zoomFoodGallery {
+  padding: 1rem;
+  filter: brightness(0.3);
+  pointer-events: none;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.dropdown {
+  display: flex;
+  gap: 1.5rem;
+  font-size: 1.1rem;
+  background-color: #2C2C54;
+  padding: .5rem;
+  border-radius: 3px;
+  position: relative;
+  height: 40px;
+  width: auto;
+  position: absolute;
+  right: 80px;
+}
+
+.dropdownOption {
+  position: absolute;
+  top: 110%;
+  background-color: #2C2C54;
+  padding: .5rem;
+  padding-inline: 1rem;
+  border-radius: 4px;
+  cursor: default;
+  transform: translateX(-15px);
+  z-index: 2;
+  display: none;
+}
+
+.dropdownOptionDisplay {
+  display: block;
+}
+
+.dropdownOption div {
+  padding-block: .3rem;
+
+}
+
+.dropdownOption div:hover {
+  border-bottom: 1px solid lightblue;
+
+}
+
+.dropdownOption div:last-child {
+  border: none;
+}
+
+.foodGalleryImage {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  margin-top: 4rem;
+
+}
+
+.eachFood {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 350px;
+  overflow: hidden;
+  background-color: #2C2C54;
+  border-radius: 10px;
+}
+
+.eachFoodDetails {
+  font-family: monospace, monospace;
+  letter-spacing: 1px;
+  margin-block: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+}
+
+.IoMdArrowDroprightCircle {
+  font-size: 1.5rem;
+  color: green;
+  fill: lightgreen;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.IoMdArrowDroprightCircle:hover {
+  fill: green;
+}
+
+.foodImageContainer {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.zoomIcon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  cursor: pointer;
+  transform: scale(0);
+  transition: transform .1s linear;
+  transform-origin: center center;
+}
+
+.zoomIcon:hover {
+  fill: lightblue;
+}
+
+.zoomImg {
+  height: clamp(300px, 80vh, 600px);
+  width: clamp(400px, 80vw, 700px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #09092e;
+  border-radius: 10px;
+}
+
+.zoomImgContainer {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.zoomImageCloseButton {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bolder;
+  top: 50px;
+  right: 80px;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.zoomImage {
+  height: 90%;
+  width: 90%;
+  object-fit: contain;
+  margin-bottom: 1rem;
+}
+
+
+.foodImageContainer:hover .zoomIcon {
+  transform: scale(1) translateX(-10px);
+
+}
+
+.foodImage {
+  height: auto;
+  width: 350px;
+  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+
+}
+
+.eachFoodOther {
+  height: 500px;
+}
+
+.foodImageContainer:hover .foodImage {
+  transform: scale(1.1);
+  cursor: pointer;
+  transform: scale(1.1);
+  filter: brightness(.6) contrast(.6);
+  cursor: pointer;
+}
+
+
+/*       Calculator      */
+
+
+
+.calculator {
+  height: 500px;
+  width: 380px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.answer {
+  height: 150px;
+  background-color: rgb(238, 236, 236);
+  color: black;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  padding-right: 10px;
+}
+
+.allButtons {
+  background-color: rgb(44, 44, 44);
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 4px;
+  padding: 4px;
+}
+
+.allbtn {
+  display: flex;
+  color: white;
+  gap: 4px;
+}
+
+.btn {
+  height: 70px;
+  width: 90px;
+  background-color: rgb(53, 52, 52);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+}
+
+.clear {
+  flex-grow: 1;
+  background-color: orange;
+}
