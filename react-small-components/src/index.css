@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&family=Oswald:wght@200..700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -34,12 +36,21 @@
   cursor: pointer;
 }
 
+.reset {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  font-size: 2.5rem;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
 .counter-score {
   text-align: center;
   margin-bottom: 2rem;
 }
 
-/*          2. Todo List                  */
+/*          2. Todo List                */
 
 .addForm,
 .searchForm,
@@ -315,9 +326,7 @@
 }
 
 
-/*       Calculator      */
-
-
+/*       4. Calculator      */
 
 .calculator {
   height: 500px;
@@ -336,6 +345,7 @@
   align-items: center;
   justify-content: end;
   padding-right: 10px;
+  overflow: hidden;
 }
 
 .allButtons {
@@ -363,7 +373,127 @@
   font-size: 1.3rem;
 }
 
+.btn:active {
+  background-color: orange;
+  color: black;
+}
+
 .clear {
   flex-grow: 1;
   background-color: orange;
+}
+
+/*      5. Toogle BackgroundColor      */
+
+.toogleBackgroundColor {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.toogleBackgroundColorLight {
+  background-color: whitesmoke;
+}
+
+.toogleButton {
+  border: 2px solid orange;
+  text-align: end;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  padding: .6rem;
+  cursor: pointer;
+}
+
+.lightColor {
+  border: 2px solid black;
+  color: black;
+}
+
+.toogleText {
+  font-family: "Bungee Outline", sans-serif;
+  font-size: clamp(1rem, 5vw, 3rem);
+  font-weight: bold;
+  color: orange;
+  white-space: nowrap;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.toogleTextLight {
+  color: black;
+}
+
+/*      6. Hidden Search Bar      */
+
+.hiddenSearchBar {
+  height: 100vh;
+  width: 100vw;
+  background-color: whitesmoke;
+  transition: all .5s linear;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hiddenSearchBarDark {
+  height: 100vh;
+  width: 100vw;
+  background-color: #00001A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all .5s linear;
+  cursor: pointer;
+}
+
+.searchBar {
+  fill: black;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.searchInput {
+  border: 1px solid whitesmoke;
+  background-color: transparent;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+/*          7.  Testimonial              */
+
+.testimonial {
+  background-color: powderblue;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  border-radius: 5px;
+}
+
+.quote {
+  color: rgb(104, 103, 103);
+}
+
+.quoteAuthor {
+  color: black;
+}
+
+.btns {
+  display: flex;
+  gap: 2rem;
+}
+
+.prevBtn,
+.nextBtn {
+  color: black;
+  padding-inline: .8rem;
+  padding-block: .4rem;
+  border-radius: 4px;
+  border: 1px solid black;
+  cursor: pointer;
 }

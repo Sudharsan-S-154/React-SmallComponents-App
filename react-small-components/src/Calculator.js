@@ -32,7 +32,6 @@ const Calculator = () => {
         }
     }
 
-
     function calculating() {
         try {
             setAnswer(eval(answer));
