@@ -497,3 +497,125 @@
   border: 1px solid black;
   cursor: pointer;
 }
+
+/*              8. Accordian                */
+
+.addAcc {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: cyan 1px solid;
+  background-color: transparent;
+  padding: .5rem;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.addAcc:hover {
+  background-color: cyan;
+  box-shadow: 0px 0px 10px cyan;
+  color: black;
+  font-weight: bolder;
+}
+
+.accordianFormContainer {
+  /* display: ; */
+  animation: form .1s linear;
+}
+
+.accordianForm {
+  height: auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 2rem;
+  gap: 2rem;
+  border-radius: 5px;
+  position: relative;
+}
+
+.nameDiv,
+.descDiv {
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+
+}
+
+input,
+textarea {
+  padding: .8rem;
+  font-size: 1.2rem;
+}
+
+textarea {
+  height: 150px;
+}
+
+.accSubmit {
+  padding: .5rem;
+  background-color: cyan;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.accFormClose {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  fill: black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
+.sAcco {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  margin: 1rem;
+  padding: .5rem;
+}
+
+.sAccoMain {
+  display: flex;
+  justify-content: space-between;
+  background-color: gray;
+  padding: 1rem;
+
+}
+
+.aAccoDesc {
+  max-height: 0px;
+  overflow: hidden;
+  
+  transform-origin: top;
+  /* transition: max-height .5s linear; */
+}
+
+.aAccoDescClicked {
+  padding: 1rem;
+  max-height: 500px;
+  overflow: hidden;
+  background-color: gray;
+  transition: max-height .5s linear;
+  transform-origin: top;
+}
+
+.accContainer,
+input,
+label,
+textarea {
+  color: black;
+}
+
+@keyframes form {
+  from {
+    scale: .9;
+  }
+
+  to {
+    scale: 1;
+  }
+}

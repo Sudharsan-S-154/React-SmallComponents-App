@@ -7,6 +7,7 @@ import MainImageGallery from "./MainImageGallery";
 import Testimonial from "./Testimonial";
 import TodoList from "./TodoList";
 import ToogleBackgroundColor from "./ToogleBackgroundColor";
+import Accordian from "./Accordian"
 
 function App() {
   return (
@@ -17,7 +18,8 @@ function App() {
       {/* <Calculator /> */}
       {/* <ToogleBackgroundColor /> */}
       {/* <HiddenSearchBar /> */}
-      <Testimonial />
+      {/* <Testimonial /> */}
+      <Accordian />
     </div>
   );
 }
